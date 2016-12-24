@@ -97,7 +97,7 @@ var graph;
         };
 
         // set up the D3 visualisation in the specified element
-        var w = 800, h = 200;
+        var w = 800, h = 400;
 
         var color = d3.scale.category10();
 
@@ -206,7 +206,21 @@ var graph;
 $page=$this->GetPageTag();
 $results = $this->LoadPagesLinkingTo($page);
 
+//print_r($results);
+//printf ("graph.addNode('".$results[0][page_tag]."');");
+
 printf ("graph.addNode('".$page."');");
+for($i = 0; $i < count($results); $i++) {
+	printf ("graph.addNode('".$results[$i][page_tag]."');");
+	printf ("graph.addLink('".$page."', '".$results[$i][page_tag]."', '12');\n");
+	$results_level_1 = $this->LoadPagesLinkingTo($results[$i][page_tag]);
+	for($j = 0; $j < count($results_level_1); $j++) {
+		printf ("	graph.addNode('".$results_level_1[$j][page_tag]."');");
+		printf ("graph.addLink('".$results[$i][page_tag]."', '".$results_level_1[$j][page_tag]."', '18');\n");
+		//$results_level_1 = $this->LoadPagesLinkingTo($results[$i][page_tag]);
+	}
+}
+/*
 foreach ($results as $key => $value) {
   for($i = 0; $i < count($value)-1; ++$i) {
     printf ("graph.addNode('".$value[$i]."');");
@@ -227,7 +241,7 @@ foreach ($results as $key => $value) {
     }
   }
 }
-
+*/
 ?>
         keepNodesOnTop();
     }
