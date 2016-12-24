@@ -42,7 +42,7 @@ Directory Estructure:
 ```bash
 cd plugins/actions
 mkdir force
-git clone git@github.com:pepitosoft/force.git force/
+git clone https://github.com/pepitosoft/force.git force/
 ```
 
 ## FAQs and TODOs
