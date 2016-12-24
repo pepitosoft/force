@@ -1,13 +1,13 @@
 # WikkaWiki Force Action plugin
 
-[![D3](https://github.com/pepitosoft/force/raw/master/images/d3icon.png)](https://d3js.org/)
+[![D3](https://raw.githubusercontent.com/pepitosoft/force/master/images/d3icon.png)](https://d3js.org/)
 [![WikkaWiki](https://github.com/oemunoz/Wikka-reveal-handler/raw/master/images/wizard.gif)](http://wikkawiki.org/HomePage)
 
 ## What is this?
 
 This is a a action plugin for easily creating WikkaWiki links representation using JavaScript and D3.
 
-![Force Preview](https://github.com/pepitosoft/force/raw/master/images/force_plugin_preview.png)
+![Force Preview](https://raw.githubusercontent.com/pepitosoft/force/master/images/force_plugin_preview.png)
 
 Easy step:
 
@@ -40,78 +40,24 @@ Drop this repo on your "/plugins/actions/force" directory.
 Directory Estructure:
 
 ```bash
-cd plugins/handlers/
-mkdir reveal
-git clone https://github.com/oemunoz/Wikka-reveal-handler.git reveal/
+cd plugins/actions
+mkdir force
+git clone git@github.com:pepitosoft/force.git force/
 ```
-
-![Directory estructure](https://github.com/oemunoz/Wikka-reveal-handler/raw/master/images/paths.png)
-
-Edit the follow code near to the end of "libs/Wakka.class.php", backup your original file and the new must be like:
-
-```php
-<?php ....
-elseif($this->GetHandler() == 'reveal')
-{
-  print($this->Handler($this->GetHandler()));
-}
-.... ?>
-```
-
-Now, If you completed this, create a new document like this:
-
-~~~~
-wikka.php?wakka=slides.md/edit
-~~~~
-
-~~~~language-markdown
-# Reveal.js
-### HTML Presentations Made Easy
-![Example Pic](https://github.com/iush/iush.github.io/raw/master/images/bio-photo.jpg)
-
-Created by [Hakim El Hattab][hakim]
-----
-# First
-====
-# Column 1, Slide 1
-----
-# Column 1, Slide 2
-----
-# Column 1, Slide 3
-====
-# Middle
-====
-# Column 2, Slide 1
-----
-# Column 2, Slide 2
-----
-# Column 2, Slide 3
-
-----
-
-# Last
-# THE END
-### BY Hakim El Hattab / hakim.se
-
-[hakim]: http://hakim.se
-~~~~
-
-And try to acces with:
-~~~~
-wikka.php?wakka=slide.md/reveal
-~~~~
-
-![Fisr slide](https://github.com/oemunoz/Wikka-reveal-handler/raw/master/images/reveal_fist.png)
 
 ## FAQs and TODOs
 
-- We can change the background?
+- I part of the default plugins of WikkaWiki
 
-> R: For now, is not, but on the follow release we gonna to allow to upload files with this in mind.
+> R: For now, is not, but we gonna to try.
 
-- [ ] TODO: Create uploads directory.
-- [ ] TODO: Auto path images on the upload directory.
+- [ ] TODO: Controler for the down level.
+- [ ] TODO: Recursive iteration for levels.
 
 # Powered by:
 - [WikkaWiki](http://wikkawiki.org/HomePage) is a flexible, standards-compliant and lightweight wiki engine written in PHP, which uses MySQL to store pages.
-- [RevealJS](https://github.com/hakimel/reveal.js/) is a framework for easily creating beautiful presentations using HTML.
+- [D3](https://d3js.org/)
+- [Animating Changes in Force Diagram](http://bl.ocks.org/ericcoopey/6c602d7cb14b25c179a4)
+
+# References:
+- [Modifying a Force Layout](http://bl.ocks.org/mbostock/1095795)
