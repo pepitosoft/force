@@ -4,12 +4,13 @@ $relative_path = explode( ',', $this->GetConfigValue('action_path'));
 $my_action_path = "error_error";
 
 foreach ($relative_path as $key => $value) {
-	if ( is_file($value.'/d3/d3/d3.v3.min.js') )
+	if ( is_file($value.'/force/d3/d3.v3.min.js') )
   {
-			 		$my_action_path = $value.'/d3/d3/d3.v3.min.js';
+			 		$my_action_path = $value.'/force/d3/d3.v3.min.js';
 	}
 }
 echo '<script type="text/javascript" src="'.$my_action_path.'"></script>';
+//echo '<button onclick="addNodes()">Restart Animation</button>';
 ?>
 
 <style>
@@ -30,7 +31,7 @@ echo '<script type="text/javascript" src="'.$my_action_path.'"></script>';
     font-size: 10px;
 }
 </style>
-<button onclick="addNodes()">Restart Animation</button>
+
 <script>
 var graph;
     function myGraph() {
