@@ -31,7 +31,7 @@ For example:
 
 ### How install it?
 
-#### Install the handler:
+#### Install the action:
 
 The first is like a simple Action plugin, this meaning that you have to add "/force" directory to actions path:
 
@@ -61,3 +61,5 @@ git clone https://github.com/pepitosoft/force.git force/
 
 # References:
 - [Modifying a Force Layout](http://bl.ocks.org/mbostock/1095795)
+- [Labeled Force Layout](http://bl.ocks.org/mbostock/950642)
+- [Animating Changes in Force Diagram](http://bl.ocks.org/ericcoopey/6c602d7cb14b25c179a4)
